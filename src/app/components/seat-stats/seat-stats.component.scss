@@ -1,0 +1,79 @@
+:host {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 15px;
+  box-shadow: 2px 2px 4px 8px #f1f1f1;
+  border-radius: 3px;
+  width: 240px;
+  margin: auto;
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 3;
+  //   min-height: 75vh;
+}
+
+h3 {
+  color: grey;
+}
+
+.charts {
+  width: 150px;
+  height: 150px;
+}
+
+.legend {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+  .vip {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: grey;
+    margin-bottom: 12px;
+    span {
+      background-color: #f84b5a;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      display: block;
+      margin-right: 10px;
+    }
+  }
+  .standard {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: grey;
+    margin-bottom: 12px;
+    span {
+      background-color: #ffa62d;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      display: block;
+      margin-right: 10px;
+    }
+  }
+  .economical {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: grey;
+    margin-bottom: 12px;
+    span {
+      background-color: #7020fe;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      display: block;
+      margin-right: 10px;
+    }
+  }
+}

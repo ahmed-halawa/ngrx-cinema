@@ -1,0 +1,24 @@
+.center-corner {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 25px;
+  position: relative;
+  &__line {
+    height: 5px;
+    background: #e4e6ee;
+    position: absolute;
+    top: 0;
+    left: 60px;
+    right: 60px;
+    border-radius: 2px;
+  }
+  &__row {
+    display: flex;
+    align-items: center;
+    app-seat {
+      margin: 8px 4px;
+    }
+  }
+}

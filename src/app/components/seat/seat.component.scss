@@ -1,0 +1,47 @@
+$seat-width: 20px;
+$seat-back-width: 16px;
+
+$red-color: #f84b5a;
+$orange-color: #ffa62d;
+$purple-color: #7020fe;
+
+:host {
+  background: transparent;
+  width: $seat-width;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  .base {
+    background: $red-color;
+    &--vip {
+      background: $red-color;
+    }
+    &--standard {
+      background: $orange-color;
+    }
+    &--economical {
+      background: $purple-color;
+    }
+    width: $seat-width;
+    height: 16px;
+    border-radius: 4px 4px 3px 3px;
+  }
+  .back {
+    background: $red-color;
+    &--vip {
+      background: $red-color;
+    }
+    &--standard {
+      background: $orange-color;
+    }
+    &--economical {
+      background: $purple-color;
+    }
+    width: $seat-back-width;
+    height: 4px;
+    border-radius: 6px;
+    margin-top: 2px;
+  }
+}

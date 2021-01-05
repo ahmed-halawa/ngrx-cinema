@@ -1,0 +1,30 @@
+<h3>Stats</h3>
+
+<div class="charts">
+  <ngx-charts-pie-chart
+    [view]="[150, 150]"
+    [results]="data"
+    [scheme]="colorScheme"
+    [legend]="false"
+    [doughnut]="true"
+    [arcWidth]="0.18"
+  >
+  </ngx-charts-pie-chart>
+</div>
+
+<div class="legend">
+  <div class="vip">
+    <span></span>
+    Vip Seats - {{ data && data[0] && data[0].value }}
+  </div>
+  <div class="standard">
+    <span></span>
+    Standard - {{ data && data[1] && data[1].value }}
+  </div>
+  <div class="economical">
+    <span></span>
+    Economical - {{ data && data[2] && data[2].value }}
+  </div>
+</div>
+
+<!-- <h3>40% Free</h3> -->

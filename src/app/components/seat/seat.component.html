@@ -1,0 +1,16 @@
+<div
+  class="base"
+  [class.base--vip]="seat?.status === 'vip'"
+  [class.base--standard]="seat?.status === 'standard'"
+  [class.base--economical]="seat?.status === 'economical'"
+  [style.opacity]="seat?.reserved ? 0.4 : 1"
+  [style.cursor]="seat?.reserved ? 'not-allowed' : 'pointer'"
+></div>
+<div
+  class="back"
+  [class.back--vip]="seat?.status === 'vip'"
+  [class.back--standard]="seat?.status === 'standard'"
+  [class.back--economical]="seat?.status === 'economical'"
+  [style.opacity]="seat?.reserved ? 0.4 : 1"
+  [style.cursor]="seat?.reserved ? 'not-allowed' : 'pointer'"
+></div>

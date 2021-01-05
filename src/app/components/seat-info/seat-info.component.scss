@@ -1,0 +1,30 @@
+.wrapper {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 15px;
+  box-shadow: 2px 2px 2px 2px #f1f1f1;
+  border-radius: 3px;
+  .occupied {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    color: #c3c3c3;
+    font-weight: 400;
+    font-size: 13px;
+    margin-right: 12px;
+  }
+  .available {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    color: #c3c3c3;
+    font-weight: 400;
+    font-size: 13px;
+  }
+}
+
+app-seat {
+  margin-right: 10px;
+}

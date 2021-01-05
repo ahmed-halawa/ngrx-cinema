@@ -1,0 +1,43 @@
+<div class="wrapper">
+  <div class="top-section">
+    <app-select-room
+      (selectRoom)="selectRoom($event)"
+      [selectedRoom]="selectedRoom$ | async"
+    ></app-select-room>
+    <app-seat-info></app-seat-info>
+  </div>
+
+  <app-spinner *ngIf="pending$ | async; else elseTemplate"></app-spinner>
+  <ng-template #elseTemplate>
+    <div class="scene">SCENE</div>
+    <div class="corners" style="display: flex; align-items: center">
+      <app-left-side
+        [seats]="leftSideSeats$ | async"
+        (reserve)="reserve($event)"
+      ></app-left-side>
+      <app-center-side
+        [seats]="centerSideSeats$ | async"
+        (reserve)="reserve($event)"
+      ></app-center-side>
+      <app-right-side
+        [seats]="rightSideSeats$ | async"
+        (reserve)="reserve($event)"
+      ></app-right-side>
+    </div>
+  </ng-template>
+</div>
+
+<app-seat-stats
+  *ngIf="!(pending$ | async)"
+  [data]="[
+    { name: 'Vip selected', value: vipReservedCount$ | async },
+    { name: 'Standard selected', value: standardReservedCount$ | async },
+    { name: 'Economical selected', value: economicalReservedCount$ | async },
+    { name: 'Vip non selected', value: vipNonReservedCount$ | async },
+    { name: 'Standard non selected', value: standardNonReservedCount$ | async },
+    {
+      name: 'Economical non selected',
+      value: economicalNonReservedCount$ | async
+    }
+  ]"
+></app-seat-stats>

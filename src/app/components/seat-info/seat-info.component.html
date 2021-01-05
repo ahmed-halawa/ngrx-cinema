@@ -1,0 +1,10 @@
+<div class="wrapper">
+  <div class="occupied">
+    Occupied
+    <app-seat [seat]="{ status: 'economical', reserved: true }"></app-seat>
+  </div>
+  <div class="available">
+    Available
+    <app-seat [seat]="{ status: 'economical' }"></app-seat>
+  </div>
+</div>

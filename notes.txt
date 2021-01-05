@@ -1,0 +1,46 @@
+guide line
+-----------
+1. https://github.com/airbnb/javascript
+2. https://medium.com/free-code-camp/google-publishes-a-javascript-style-guide-here-are-some-key-lessons-1810b8ad050b
+
+immutable
+----------
+1. https://www.youtube.com/watch?v=Wo0qiGPSV-s
+
+// mutable
+function func1(array) {
+  array.push({});
+  return array;
+}
+
+// immutable
+function func2(array) {
+  return [...array, {}];
+}
+
+
+entities
+---------
+const productsArray = [
+  {
+    id: 1,
+    name: "product one",
+  },
+  {
+    id: 2,
+    name: "product two",
+  },
+];
+
+const productsEntity = {
+  1: {
+    id: 1,
+    name: "product one",
+  },
+  2: {
+    id: 2,
+    name: "product two",
+  },
+};
+
+productsArray.reduce((acc, item) => ({ ...acc, [item.id]: item }), {});

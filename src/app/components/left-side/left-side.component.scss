@@ -1,0 +1,20 @@
+.left-side {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  transform: rotate(25deg);
+  width: fit-content;
+  padding-top: 25px;
+  position: relative;
+  &__line {
+    height: 5px;
+    border-radius: 2px;
+    background: #e4e6ee;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  app-seat {
+    margin: 8px 4px;
+  }
+}

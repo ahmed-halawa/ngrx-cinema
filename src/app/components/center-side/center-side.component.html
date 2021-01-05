@@ -1,0 +1,51 @@
+<div class="center-corner">
+  <div class="center-corner__line"></div>
+  <!-- add 9 -->
+  <div class="center-corner__row">
+    <app-seat
+      *ngFor="let seat of seats | slice: 0:9"
+      [seat]="seat"
+      (click)="reserve.emit(seat)"
+    ></app-seat>
+  </div>
+  <!-- add 10 -->
+  <div class="center-corner__row">
+    <app-seat
+      *ngFor="let seat of seats | slice: 9:19"
+      [seat]="seat"
+      (click)="reserve.emit(seat)"
+    ></app-seat>
+  </div>
+  <!-- add 11 -->
+  <div class="center-corner__row">
+    <app-seat
+      *ngFor="let seat of seats | slice: 19:30"
+      [seat]="seat"
+      (click)="reserve.emit(seat)"
+    ></app-seat>
+  </div>
+  <!-- add 12 -->
+  <div class="center-corner__row">
+    <app-seat
+      *ngFor="let seat of seats | slice: 30:42"
+      [seat]="seat"
+      (click)="reserve.emit(seat)"
+    ></app-seat>
+  </div>
+  <!-- add 13 -->
+  <div class="center-corner__row">
+    <app-seat
+      *ngFor="let seat of seats | slice: 42:55"
+      [seat]="seat"
+      (click)="reserve.emit(seat)"
+    ></app-seat>
+  </div>
+  <!-- add 14 -->
+  <div class="center-corner__row">
+    <app-seat
+      *ngFor="let seat of seats | slice: 55:69"
+      [seat]="seat"
+      (click)="reserve.emit(seat)"
+    ></app-seat>
+  </div>
+</div>
